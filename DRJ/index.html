@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRJ</title>
+    <link rel="stylesheet" href="CSS/carregamento.css">
+    <link rel="stylesheet" href="CSS/index.css">
+</head>
+<body>
+    <main class="entrada-site">
+        <p>Iniciando o DRJ...</p>
+        <p><a href="Login.html">Abrir login</a></p>
+    </main>
+
+    <script src="JS/carregamento.js"></script>
+    <script>
+        const destinoInicial = localStorage.getItem("usuarioLogado") === "true"
+            ? "Tela Principal.html"
+            : "Login.html";
+
+        irComCarregamento(destinoInicial, "Iniciando o DRJ...", 1600);
+    </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localizacoes | DRJ</title>
+    <link rel="stylesheet" href="CSS/carregamento.css">
+    <link rel="stylesheet" href="CSS/maps.css">
+</head>
+<body>
+    <header>
+        <a class="botao-voltar" href="index.html" aria-label="Voltar para a tela principal">
+            <span aria-hidden="true">&lsaquo;</span>
+        </a>
+
+        <img class="logo" src="imagens/logo.png" alt="Logo DRJ">
+
+        <a class="botao-login" href="Login.html" aria-label="Perfil do usuario">
+            <img class="img-login" src="imagens/login_botão.png" alt="">
+        </a>
+    </header>
+
+    <main class="conteudo-localizacao">
+        <div class="cabecalho-localizacao">
+            <div>
+                <h1>Minhas localizacoes</h1>
+                <p>Cadastre mais de um endereco e escolha qual deseja editar ou remover.</p>
+            </div>
+
+            <div class="acoes-localizacao">
+                <button class="botao-nova-localizacao" type="button">Adicionar nova localizacao</button>
+                <button class="botao-remover-localizacao" type="button">Remover localizacao</button>
+            </div>
+        </div>
+
+        <section class="lista-localizacoes" aria-label="Localizacoes salvas">
+            <p class="mensagem-lista">Nenhuma localizacao salva ainda.</p>
+        </section>
+
+        <form class="form-localizacao">
+            <input id="indiceLocalizacao" type="hidden" value="">
+
+            <div class="campo">
+                <label for="cep">CEP</label>
+                <input id="cep" name="cep" type="text" placeholder="00000-000" inputmode="numeric" required>
+            </div>
+
+            <div class="campo">
+                <label for="estado">Estado</label>
+                <select id="estado" name="estado" required>
+                    <option value="">Selecione</option>
+                    <option value="AC">AC</option>
+                    <option value="AL">AL</option>
+                    <option value="AP">AP</option>
+                    <option value="AM">AM</option>
+                    <option value="BA">BA</option>
+                    <option value="CE">CE</option>
+                    <option value="DF">DF</option>
+                    <option value="ES">ES</option>
+                    <option value="GO">GO</option>
+                    <option value="MA">MA</option>
+                    <option value="MT">MT</option>
+                    <option value="MS">MS</option>
+                    <option value="MG">MG</option>
+                    <option value="PA">PA</option>
+                    <option value="PB">PB</option>
+                    <option value="PR">PR</option>
+                    <option value="PE">PE</option>
+                    <option value="PI">PI</option>
+                    <option value="RJ">RJ</option>
+                    <option value="RN">RN</option>
+                    <option value="RS">RS</option>
+                    <option value="RO">RO</option>
+                    <option value="RR">RR</option>
+                    <option value="SC">SC</option>
+                    <option value="SP">SP</option>
+                    <option value="SE">SE</option>
+                    <option value="TO">TO</option>
+                </select>
+            </div>
+
+            <div class="campo campo-grande">
+                <label for="rua">Rua</label>
+                <input id="rua" name="rua" type="text" placeholder="Nome da rua" required>
+            </div>
+
+            <div class="campo">
+                <label for="numero">Numero</label>
+                <input id="numero" name="numero" type="text" placeholder="Ex: 123" required>
+            </div>
+
+            <div class="campo">
+                <label for="bairro">Bairro</label>
+                <input id="bairro" name="bairro" type="text" placeholder="Nome do bairro" required>
+            </div>
+
+            <div class="campo">
+                <label for="cidade">Cidade</label>
+                <input id="cidade" name="cidade" type="text" placeholder="Nome da cidade" required>
+            </div>
+
+            <div class="campo">
+                <label for="complemento">Complemento</label>
+                <input id="complemento" name="complemento" type="text" placeholder="Apto, bloco, loja...">
+            </div>
+
+            <div class="campo campo-grande">
+                <label for="endereco">Endereco completo</label>
+                <input id="endereco" name="endereco" type="text" placeholder="Endereco completo ou observacao do local">
+            </div>
+
+            <div class="campo campo-grande">
+                <label for="referencia">Ponto de referencia</label>
+                <textarea id="referencia" name="referencia" placeholder="Ex: perto da avenida principal"></textarea>
+            </div>
+
+            <button class="botao-salvar-localizacao" type="submit">Salvar localizacao</button>
+        </form>
+    </main>
+
+    <script src="JS/carregamento.js"></script>
+    <script src="JS/maps.js"></script>
+</body>
+</html>

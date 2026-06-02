@@ -1,0 +1,173 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    box-sizing: border-box;
+    background:
+        linear-gradient(180deg, rgba(10, 9, 8, 0.7), rgba(22, 10, 4, 0.94)),
+        url("../imagens/fundo-churrasco.jpeg") center / cover fixed;
+    color: #fff7ea;
+    font-family: Arial, sans-serif;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 410px;
+    padding: 32px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgba(28, 18, 12, 0.94);
+    border: 2px solid rgba(240, 161, 58, 0.85);
+    border-radius: 14px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(7px);
+}
+
+.login-logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.login-container h1 {
+    margin: 0 0 24px;
+    color: #fff7ea;
+    font-size: 28px;
+}
+
+.mensagem-usuario {
+    margin: -12px 0 20px;
+    color: #f2a23a;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-login input {
+    padding: 12px;
+    color: #fff7ea;
+    font-size: 16px;
+    background-color: rgba(255, 243, 223, 0.12);
+    border: 2px solid rgba(240, 161, 58, 0.78);
+    border-radius: 8px;
+    outline: none;
+}
+
+.form-login input::placeholder {
+    color: #f8dbc0;
+}
+
+.form-login button,
+.botao-foto,
+.botao-principal,
+.botao-sair {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 44px;
+    padding: 12px;
+    border: 2px solid #2a140a;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.form-login button,
+.botao-foto,
+.botao-principal {
+    color: #fff;
+    background-color: #b63b16;
+}
+
+.form-login button:hover,
+.botao-foto:hover,
+.botao-principal:hover {
+    background-color: #d14b1d;
+}
+
+.form-login button.login-concluido {
+    background-color: #2f9e44;
+    transform: scale(0.98);
+}
+
+.botao-sair {
+    color: #1a0d07;
+    background-color: #f2a23a;
+}
+
+.painel-usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.painel-usuario[hidden],
+.painel-login[hidden] {
+    display: none;
+}
+
+.foto-perfil {
+    width: 128px;
+    height: 128px;
+    margin-bottom: 14px;
+    overflow: hidden;
+    background-color: #3a1d10;
+    border: 3px solid #f0a13a;
+    border-radius: 50%;
+}
+
+.preview-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.input-foto {
+    display: none;
+}
+
+.dados-usuario {
+    width: 100%;
+    margin: 18px 0;
+    padding: 14px;
+    box-sizing: border-box;
+    text-align: left;
+    background-color: rgba(255, 243, 223, 0.08);
+    border: 2px solid rgba(240, 161, 58, 0.78);
+    border-radius: 10px;
+}
+
+.dados-usuario p {
+    margin: 8px 0;
+    color: #f8dbc0;
+    word-break: break-word;
+}
+
+.acoes-usuario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (max-width: 480px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    .login-container {
+        padding: 24px;
+    }
+}

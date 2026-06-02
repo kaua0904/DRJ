@@ -1,0 +1,125 @@
+.tela-carregamento {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    box-sizing: border-box;
+    background:
+        linear-gradient(180deg, rgba(10, 9, 8, 0.74), rgba(22, 10, 4, 0.96)),
+        url("../imagens/fundo-churrasco.jpeg") center / cover fixed;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.tela-carregamento.ativa {
+    opacity: 1;
+    visibility: visible;
+}
+
+.caixa-carregamento {
+    width: min(92vw, 520px);
+    padding: 30px 24px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgba(28, 18, 12, 0.94);
+    border: 2px solid rgba(240, 161, 58, 0.85);
+    border-radius: 14px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.48);
+    backdrop-filter: blur(7px);
+}
+
+.palco-carregamento {
+    position: relative;
+    height: min(54vw, 280px);
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 900px;
+    transform-style: preserve-3d;
+}
+
+.imagem-carregamento {
+    display: block;
+    width: min(100%, 430px);
+    border-radius: 12px;
+    filter: drop-shadow(0 14px 14px rgba(0, 0, 0, 0.42));
+    transform-style: preserve-3d;
+    animation: girarImagemCarregamento 6.5s linear infinite;
+}
+
+.sombra-carregamento {
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    width: 42%;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgba(240, 161, 58, 0.24);
+    filter: blur(8px);
+    transform: translateX(-50%) rotateX(70deg);
+    animation: sombraImagemCarregamento 6.5s linear infinite;
+}
+
+.texto-carregamento {
+    margin: 0;
+    color: #f2a23a;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+}
+
+@keyframes girarImagemCarregamento {
+    0% {
+        transform: rotateX(12deg) rotateY(0deg) translateY(0);
+    }
+
+    25% {
+        transform: rotateX(12deg) rotateY(90deg) translateY(-8px);
+    }
+
+    50% {
+        transform: rotateX(12deg) rotateY(180deg) translateY(0);
+    }
+
+    75% {
+        transform: rotateX(12deg) rotateY(270deg) translateY(-8px);
+    }
+
+    100% {
+        transform: rotateX(12deg) rotateY(360deg) translateY(0);
+    }
+}
+
+@keyframes sombraImagemCarregamento {
+    0%,
+    50%,
+    100% {
+        opacity: 0.22;
+        transform: translateX(-50%) rotateX(70deg) scaleX(1);
+    }
+
+    25%,
+    75% {
+        opacity: 0.13;
+        transform: translateX(-50%) rotateX(70deg) scaleX(0.55);
+    }
+}
+
+@media (max-width: 520px) {
+    .palco-carregamento {
+        height: 220px;
+    }
+
+    .imagem-carregamento {
+        width: min(100%, 330px);
+    }
+
+    .sombra-carregamento {
+        bottom: 28px;
+    }
+}

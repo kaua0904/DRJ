@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | DRJ</title>
+    <link rel="stylesheet" href="CSS/carregamento.css">
+    <link rel="stylesheet" href="CSS/Login.css">
+</head>
+<body>
+    <main class="login-container">
+        <section class="painel-login">
+            <img class="login-logo" src="imagens/logo.png" alt="Logo DRJ">
+            <h1>Entrar no DRJ</h1>
+
+            <form class="form-login">
+                <input id="nome" name="nome" type="text" placeholder="Nome" aria-label="Nome" required>
+                <input id="email" name="email" type="email" placeholder="E-mail" aria-label="E-mail" required>
+                <input id="senha" name="senha" type="password" placeholder="Senha" aria-label="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+
+        <section class="painel-usuario" hidden>
+            <img class="login-logo" src="imagens/logo.png" alt="Logo DRJ">
+            <h1>Meu usuario</h1>
+            <p class="mensagem-usuario">Login efetuado! Aproveite o site.</p>
+
+            <div class="foto-perfil">
+                <img class="preview-foto" src="imagens/login_feito.png" alt="Foto de perfil">
+            </div>
+
+            <label class="botao-foto" for="fotoPerfil">Escolher foto</label>
+            <input id="fotoPerfil" class="input-foto" type="file" accept="image/*">
+
+            <div class="dados-usuario">
+                <p><strong>Nome:</strong> <span class="usuario-nome"></span></p>
+                <p><strong>E-mail:</strong> <span class="usuario-email"></span></p>
+            </div>
+
+            <div class="acoes-usuario">
+                <a class="botao-principal" href="Tela Principal.html">Ir para tela principal</a>
+                <button class="botao-sair" type="button">Sair</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="JS/carregamento.js"></script>
+    <script src="JS/Login.js"></script>
+</body>
+</html>

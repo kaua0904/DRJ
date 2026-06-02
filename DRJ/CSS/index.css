@@ -1,0 +1,37 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    box-sizing: border-box;
+    background:
+        linear-gradient(180deg, rgba(10, 9, 8, 0.7), rgba(22, 10, 4, 0.94)),
+        url("../imagens/fundo-churrasco.jpeg") center / cover fixed;
+    color: #fff7ea;
+    font-family: Arial, sans-serif;
+}
+
+.entrada-site {
+    width: min(92%, 420px);
+    padding: 28px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgba(28, 18, 12, 0.94);
+    border: 2px solid rgba(240, 161, 58, 0.85);
+    border-radius: 14px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(7px);
+}
+
+.entrada-site p {
+    margin: 10px 0;
+    color: #f8dbc0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.entrada-site a {
+    color: #f2a23a;
+}
